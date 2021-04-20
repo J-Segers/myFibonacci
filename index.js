@@ -3,7 +3,19 @@
 //de fibonacci sequence begint met 0 en eindigt met 987 [0 ,1 ,1 , 2, 3, ... , 610, 987]
 //----------------------------------------------------------------------------------------------------------------------
 
-
+function myFibonacci(number){
+    let num1 = 0, num2 = 1, sum = 0;
+    const fibArr = [];
+    while(sum < number) {
+        sum = num1;
+        num1 = num1 + num2;
+        num2 = sum;
+        if(sum < number) {
+            fibArr.push(sum);
+        }
+    }
+    return fibArr;
+}
 
 //----------------------------------------------------------------------------------------------------------------------
 
